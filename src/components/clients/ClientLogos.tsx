@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { clients } from '../../data/clients';
 import { ClientLogo } from './ClientLogo';
 

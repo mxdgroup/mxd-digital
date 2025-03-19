@@ -1,3 +1,4 @@
+import React from 'react';
 import { Button } from './Button';
 import { Container } from './ui/Container';
 
@@ -17,7 +18,7 @@ export function Growth() {
           </div>
           <div className="flex justify-center">
             <img 
-              src="https://mxd.digital/wp-content/uploads/2022/10/MXD-marketing-growth.gif"
+              src="/images/growth/marketing-growth.gif"
               alt="Marketing Growth Animation"
               className="max-w-md w-full"
             />

@@ -1,3 +1,4 @@
+import React from 'react';
 import { Button } from './Button';
 import { Container } from './ui/Container';
 
@@ -19,7 +20,7 @@ export function Hero() {
           </div>
           <div className="relative hidden md:block">
             <img 
-              src="https://mxd.digital/wp-content/uploads/2024/09/MxD-Marketing-and-Digital-Solutions-Header-Image.png"
+              src="/images/hero/header-image.png"
               alt="MxD Marketing Solutions"
               className="w-full h-auto rounded-lg"
             />

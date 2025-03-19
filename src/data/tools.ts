@@ -1,34 +1,34 @@
 export const tools = [
   {
     name: "Meta",
-    logo: "https://mxd.digital/wp-content/uploads/2022/08/Meta_Platforms-Logo.jpg"
+    logo: "/images/tools/meta.jpg"
   },
   {
     name: "Google Ads",
-    logo: "https://mxd.digital/wp-content/uploads/2022/10/Ads-logo.jpg"
+    logo: "/images/tools/google-ads.jpg"
   },
   {
     name: "Salesforce",
-    logo: "https://mxd.digital/wp-content/uploads/2022/08/Salesforce-logo.jpg"
+    logo: "/images/tools/salesforce.jpg"
   },
   {
     name: "Klaviyo",
-    logo: "https://mxd.digital/wp-content/uploads/2022/08/Klaviyo-logo.jpg"
+    logo: "/images/tools/klaviyo.jpg"
   },
   {
     name: "HubSpot",
-    logo: "https://mxd.digital/wp-content/uploads/2022/08/Hubspot-logo.jpg"
+    logo: "/images/tools/hubspot.jpg"
   },
   {
     name: "BigCommerce",
-    logo: "https://mxd.digital/wp-content/uploads/2022/08/BigCommerce-logo.jpg"
+    logo: "/images/tools/bigcommerce.jpg"
   },
   {
     name: "Airtable",
-    logo: "https://mxd.digital/wp-content/uploads/2022/08/Airtable-logo-1.png"
+    logo: "/images/tools/airtable.png"
   },
   {
     name: "Hotjar",
-    logo: "https://mxd.digital/wp-content/uploads/2022/10/hotjar-logo.jpg"
+    logo: "/images/tools/hotjar.jpg"
   }
 ];

@@ -1,34 +1,34 @@
 export const clients = [
   {
     name: "Hill and Co",
-    logo: "https://mxd.digital/wp-content/uploads/2023/12/Hill-and-Co.jpg"
+    logo: "/images/clients/hill-and-co.jpg"
   },
   {
     name: "FreshInvest",
-    logo: "https://mxd.digital/wp-content/uploads/2022/10/FreshInvest.jpg"
+    logo: "/images/clients/fresh-invest.jpg"
   },
   {
     name: "Cleartrip",
-    logo: "https://mxd.digital/wp-content/uploads/2022/10/Cleartrip.jpg"
+    logo: "/images/clients/cleartrip.jpg"
   },
   {
     name: "flydubai",
-    logo: "https://mxd.digital/wp-content/uploads/2022/10/flydubai-copy.jpg"
+    logo: "/images/clients/flydubai.jpg"
   },
   {
     name: "ifeelgood",
-    logo: "https://mxd.digital/wp-content/uploads/2022/10/ifeelgood-247.jpg"
+    logo: "/images/clients/ifeelgood.jpg"
   },
   {
     name: "Move with Us",
-    logo: "https://mxd.digital/wp-content/uploads/2024/09/MWU_Logo_New-1.webp"
+    logo: "/images/clients/move-with-us.webp"
   },
   {
     name: "Viewpoint Feedback",
-    logo: "https://mxd.digital/wp-content/uploads/2024/09/viewpoint-feedback.webp"
+    logo: "/images/clients/viewpoint-feedback.webp"
   },
   {
     name: "Slantboard Guy",
-    logo: "https://mxd.digital/wp-content/uploads/2022/10/Slantboad-Guy.jpg"
+    logo: "/images/clients/slantboard-guy.jpg"
   }
 ];

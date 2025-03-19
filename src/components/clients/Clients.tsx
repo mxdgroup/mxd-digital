@@ -1,3 +1,4 @@
+import React from 'react';
 import { ClientLogos } from './ClientLogos';
 import { Container } from '../ui/Container';
 
