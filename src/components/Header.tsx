@@ -2,8 +2,6 @@ import { useState } from 'react';
 import { Button } from './Button';
 import { Logo } from './Logo';
 import { Container } from './ui/Container';
-import { useScrollToElement } from '../hooks/useScrollToElement';
-import { trackEvent } from '../utils/analytics';
 
 export function Header() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -24,7 +22,7 @@ export function Header() {
             <Logo />
           </div>
           <div className="flex-shrink-0 ml-2">
-            <Button 
+            <Button
               onClick={() => setIsPopupOpen(true)}
               className="text-sm md:text-base px-4 md:px-6 py-1.5 md:py-2"
             >
@@ -43,7 +41,7 @@ export function Header() {
                 <h2 className="text-2xl font-bold mb-2">Let's chat</h2>
                 <p className="text-gray-600 mb-6">Our team can help you find the right marketing solutions. Please fill in a bit of information and we'll be in touch.</p>
               </div>
-              <button 
+              <button
                 onClick={() => setIsPopupOpen(false)}
                 className="text-gray-400 hover:text-gray-600"
               >
@@ -51,14 +49,14 @@ export function Header() {
               </button>
             </div>
 
-            <form 
-              name="contact-popup" 
+            <form
+              name="contact-popup"
               data-netlify="true"
               onSubmit={handleSubmit}
               className="space-y-4"
             >
               <input type="hidden" name="form-name" value="contact-popup" />
-              
+
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">First name</label>
