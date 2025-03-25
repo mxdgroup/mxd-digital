@@ -1,14 +1,40 @@
 import { Button } from './Button';
 import { Container } from './ui/Container';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
+import { sendContactFormEmail } from '../utils/email';
 
 export function Contact() {
   const [showThankYou, setShowThankYou] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const emailRef = useRef<HTMLInputElement>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setShowThankYou(true);
-    setTimeout(() => setShowThankYou(false), 5000);
+    
+    if (!emailRef.current?.value) return;
+    
+    setIsSubmitting(true);
+    setError(null);
+    
+    try {
+      // Send email using the utility function
+      await sendContactFormEmail(emailRef.current.value);
+      
+      // Show thank you message and reset form
+      setShowThankYou(true);
+      setTimeout(() => setShowThankYou(false), 5000);
+      
+      // Reset form
+      if (emailRef.current) {
+        emailRef.current.value = '';
+      }
+    } catch (err) {
+      console.error('Failed to send email:', err);
+      setError('Failed to send your message. Please try again later.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -34,11 +60,23 @@ export function Contact() {
                 placeholder="Work email"
                 className="flex-1 px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 required
+                ref={emailRef}
+                disabled={isSubmitting}
               />
-              <Button type="submit" className="w-full md:w-auto">
-                Let's chat
+              <Button 
+                type="submit" 
+                className="w-full md:w-auto"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? 'Sending...' : 'Let\'s chat'}
               </Button>
             </form>
+            
+            {error && (
+              <div className="mt-4 text-red-500">
+                {error}
+              </div>
+            )}
           </div>
         </div>
 
